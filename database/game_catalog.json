@@ -1,0 +1,884 @@
+{
+  "user": {
+    "name": "Alex",
+    "level": 4,
+    "stars": 125,
+    "coins": 80,
+    "badges": 4,
+    "ageGroup": "8-9",
+    "avatar": "A",
+    "streak": 5,
+    "favoriteSubject": "math",
+    "lastQuest": "Bosque de los Números"
+  },
+  "subjects": [
+    {
+      "id": "math",
+      "name": "Matemáticas",
+      "title": "El Bosque de los Números",
+      "shortName": "Bosque",
+      "color": "orange",
+      "accent": "#f59e0b",
+      "progress": 7,
+      "total": 10,
+      "badge": "★★★",
+      "icon": "calc",
+      "description": "Sumas, patrones y resolución de problemas.",
+      "storyArc": "Un bosque perdido necesita que los números vuelvan a brillar para abrir el portal del conocimiento.",
+      "learningGoals": [
+        "contar con rapidez",
+        "resolver operaciones sencillas",
+        "reconocer patrones"
+      ],
+      "difficulty": "Fácil"
+    },
+    {
+      "id": "spanish",
+      "name": "Español",
+      "title": "La Biblioteca Mágica",
+      "shortName": "Biblioteca",
+      "color": "purple",
+      "accent": "#8b5cf6",
+      "progress": 4,
+      "total": 10,
+      "badge": "★★",
+      "icon": "book",
+      "description": "Lectura, palabras y expresión escrita.",
+      "storyArc": "En la biblioteca, cada palabra desbloquea un libro y cada historia abre una nueva puerta del reino.",
+      "learningGoals": [
+        "identificar letras",
+        "leer con fluidez",
+        "formar oraciones"
+      ],
+      "difficulty": "Media"
+    },
+    {
+      "id": "science",
+      "name": "Ciencias",
+      "title": "El Laboratorio de los Exploradores",
+      "shortName": "Laboratorio",
+      "color": "green",
+      "accent": "#10b981",
+      "progress": 6,
+      "total": 10,
+      "badge": "★★★",
+      "icon": "flask",
+      "description": "Descubrimientos del mundo natural y del cuerpo humano.",
+      "storyArc": "El laboratorio está despierto: plantas, animales y agua necesitan ser observados para salvar la misión.",
+      "learningGoals": [
+        "observar el entorno",
+        "comparar animales y plantas",
+        "entender el agua y la tierra"
+      ],
+      "difficulty": "Media"
+    }
+  ],
+  "dailyChallenges": [
+    {
+      "id": "challenge-1",
+      "title": "Reto del conteo",
+      "subject": "math",
+      "reward": 15,
+      "status": "disponible",
+      "mechanic": "Tiro al blanco",
+      "activityId": "math-4"
+    },
+    {
+      "id": "challenge-2",
+      "title": "Palabras secretas",
+      "subject": "spanish",
+      "reward": 12,
+      "status": "disponible",
+      "mechanic": "Colección",
+      "activityId": "spanish-7"
+    },
+    {
+      "id": "challenge-3",
+      "title": "Mini científico",
+      "subject": "science",
+      "reward": 18,
+      "status": "bloqueado",
+      "mechanic": "Carrera",
+      "activityId": "science-5"
+    }
+  ],
+  "mechanicsCatalog": [
+    {
+      "id": "puzzle",
+      "name": "Rompecabezas",
+      "description": "Arma la pieza correcta para completar la misión."
+    },
+    {
+      "id": "target",
+      "name": "Tiro al blanco",
+      "description": "Elige la respuesta correcta antes de que se acabe el tiempo."
+    },
+    {
+      "id": "drag",
+      "name": "Arrastrar y colocar",
+      "description": "Organiza los elementos para completar la tarea."
+    },
+    {
+      "id": "memory",
+      "name": "Memoria",
+      "description": "Encuentra las parejas ocultas."
+    },
+    {
+      "id": "race",
+      "name": "Carrera",
+      "description": "Avanza cada vez que respondes bien."
+    },
+    {
+      "id": "collection",
+      "name": "Colección",
+      "description": "Consigue objetos y suma puntos."
+    },
+    {
+      "id": "boss",
+      "name": "Jefe final",
+      "description": "Resuelve varias pruebas seguidas para ganar."
+    },
+    {
+      "id": "train",
+      "name": "Tren",
+      "description": "Ordena los vagones para avanzar."
+    },
+    {
+      "id": "garden",
+      "name": "Cultivar",
+      "description": "Haz crecer la planta con cada acierto."
+    },
+    {
+      "id": "rocket",
+      "name": "Cohete",
+      "description": "Completa una misión para lanzar el cohete."
+    }
+  ],
+  "journeyMap": [
+    {
+      "id": "start",
+      "label": "Inicio",
+      "unlocked": true
+    },
+    {
+      "id": "math",
+      "label": "Bosque",
+      "unlocked": true
+    },
+    {
+      "id": "spanish",
+      "label": "Biblioteca",
+      "unlocked": true
+    },
+    {
+      "id": "science",
+      "label": "Laboratorio",
+      "unlocked": false
+    }
+  ],
+  "activities": {
+    "math": [
+      {
+        "id": "math-1",
+        "title": "Atrapa el número",
+        "type": "multiple-choice",
+        "prompt": "¡Encuentra el número 7!",
+        "options": [
+          3,
+          7,
+          9
+        ],
+        "answer": 7,
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Fácil",
+        "tip": "Cuenta de uno en uno.",
+        "storyStep": "Capítulo 1: La puerta del bosque"
+      },
+      {
+        "id": "math-2",
+        "title": "Suma de monstruos",
+        "type": "multiple-choice",
+        "prompt": "Tres monstruos más dos monstruos, ¿cuántos hay en total?",
+        "options": [
+          4,
+          5,
+          6
+        ],
+        "answer": 5,
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Fácil",
+        "tip": "Agrupa y suma.",
+        "storyStep": "Capítulo 2: El sendero de los monstruos"
+      },
+      {
+        "id": "math-3",
+        "title": "Ordena el río",
+        "type": "sort",
+        "prompt": "Ordena del menor al mayor para abrir el puente.",
+        "values": [
+          9,
+          2,
+          5
+        ],
+        "answer": [
+          2,
+          5,
+          9
+        ],
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Empieza por el valor más pequeño.",
+        "storyStep": "Capítulo 3: El puente de números"
+      },
+      {
+        "id": "math-4",
+        "title": "Tiro al blanco",
+        "type": "target",
+        "mechanic": "Tiro al blanco",
+        "prompt": "Apunta al número que representa 4 + 4.",
+        "options": [
+          6,
+          8,
+          10
+        ],
+        "answer": 8,
+        "reward": 12,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Doble el número 4.",
+        "storyStep": "Capítulo 4: El objetivo del guardian"
+      },
+      {
+        "id": "math-5",
+        "title": "Memoria de cifras",
+        "type": "memory",
+        "prompt": "Encuentra las parejas de los números iguales.",
+        "cards": [
+          "dog",
+          "cat",
+          "dog",
+          "cat",
+          "fox",
+          "fox"
+        ],
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Recuerda la posición de las cartas.",
+        "storyStep": "Capítulo 5: La cueva del recuerdo"
+      },
+      {
+        "id": "math-6",
+        "title": "La feria del bosque",
+        "type": "collection",
+        "mechanic": "Colección",
+        "prompt": "Si cada lápiz vale 3 monedas y compras 2, ¿cuánto gastas?",
+        "options": [
+          5,
+          6,
+          7
+        ],
+        "answer": 6,
+        "reward": 12,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Suma dos veces el valor.",
+        "storyStep": "Capítulo 6: La feria del bosque"
+      },
+      {
+        "id": "math-7",
+        "title": "¿Cuál es mayor?",
+        "type": "multiple-choice",
+        "prompt": "¿Cuál número es más grande?",
+        "options": [
+          8,
+          5,
+          3
+        ],
+        "answer": 8,
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Fácil",
+        "tip": "Compara valor por valor.",
+        "storyStep": "Capítulo 7: El árbol más alto"
+      },
+      {
+        "id": "math-8",
+        "title": "Completa la serie",
+        "type": "multiple-choice",
+        "prompt": "2, 4, 6, __",
+        "options": [
+          7,
+          8,
+          9
+        ],
+        "answer": 8,
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Fácil",
+        "tip": "La serie suma 2.",
+        "storyStep": "Capítulo 8: El sendero de patrones"
+      },
+      {
+        "id": "math-9",
+        "title": "Tren de números",
+        "type": "train",
+        "mechanic": "Tren",
+        "prompt": "Ordena los vagones del menor al mayor para seguir el viaje.",
+        "values": [
+          "3",
+          "1",
+          "2"
+        ],
+        "answer": [
+          "1",
+          "2",
+          "3"
+        ],
+        "reward": 12,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Empieza con el más pequeño.",
+        "storyStep": "Capítulo 9: El tren del bosque"
+      },
+      {
+        "id": "math-10",
+        "title": "Carrera de los números",
+        "type": "race",
+        "mechanic": "Carrera",
+        "prompt": "¿Qué resultado de 10 + 5 - 3 te lleva a la meta?",
+        "options": [
+          11,
+          12,
+          13
+        ],
+        "answer": 12,
+        "reward": 12,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Haz la suma primero y luego resta.",
+        "storyStep": "Capítulo 10: La pista final"
+      },
+      {
+        "id": "math-11",
+        "title": "Figuras geométricas",
+        "type": "multiple-choice",
+        "prompt": "¿Qué figura tiene 3 lados?",
+        "options": [
+          "Cuadrado",
+          "Triángulo",
+          "Círculo"
+        ],
+        "answer": "Triángulo",
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Media",
+        "tip": "Piensa en lados.",
+        "storyStep": "Capítulo 11: El puente triangular"
+      },
+      {
+        "id": "math-12",
+        "title": "El reloj del árbol",
+        "type": "multiple-choice",
+        "prompt": "Si el reloj marca las 3:00, ¿qué hora es?",
+        "options": [
+          "2:00",
+          "3:00",
+          "4:00"
+        ],
+        "answer": "3:00",
+        "reward": 10,
+        "subject": "math",
+        "difficulty": "Fácil",
+        "tip": "Mira la manecilla de las horas.",
+        "storyStep": "Capítulo 12: La hora del portal"
+      }
+    ],
+    "spanish": [
+      {
+        "id": "spanish-1",
+        "title": "La palabra escondida",
+        "type": "multiple-choice",
+        "prompt": "¿Cuál palabra completa “m___r”?",
+        "options": [
+          "mar",
+          "sol",
+          "pez"
+        ],
+        "answer": "mar",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Fácil",
+        "tip": "Busca la sílaba que falta.",
+        "storyStep": "Capítulo 1: La primera pista de la biblioteca"
+      },
+      {
+        "id": "spanish-2",
+        "title": "Completa la palabra",
+        "type": "multiple-choice",
+        "prompt": "¿Qué falta en “ca___”?",
+        "options": [
+          "sa",
+          "zo",
+          "ma"
+        ],
+        "answer": "sa",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Fácil",
+        "tip": "La palabra más común es una casa pequeña.",
+        "storyStep": "Capítulo 2: La palabra perdida"
+      },
+      {
+        "id": "spanish-3",
+        "title": "Une imagen y palabra",
+        "type": "matching",
+        "prompt": "Relaciona cada palabra con su imagen",
+        "pairs": [
+          {
+            "left": "Casa",
+            "right": "house"
+          },
+          {
+            "left": "Árbol",
+            "right": "tree"
+          },
+          {
+            "left": "Sol",
+            "right": "sun"
+          }
+        ],
+        "answer": [
+          "Casa",
+          "Árbol",
+          "Sol"
+        ],
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "Asocia cada palabra con su significado visual.",
+        "storyStep": "Capítulo 3: El cuadro de palabras mágicas"
+      },
+      {
+        "id": "spanish-4",
+        "title": "Memorama de palabras",
+        "type": "memory",
+        "prompt": "Encuentra las parejas iguales para abrir el libro escondido.",
+        "cards": [
+          "dog",
+          "cat",
+          "dog",
+          "cat",
+          "fox",
+          "fox"
+        ],
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "Recuerda la posición de cada carta.",
+        "storyStep": "Capítulo 4: La sala del recuerdo"
+      },
+      {
+        "id": "spanish-5",
+        "title": "La letra inicial",
+        "type": "multiple-choice",
+        "prompt": "¿Qué letra inicia “gato”?",
+        "options": [
+          "G",
+          "M",
+          "P"
+        ],
+        "answer": "G",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Fácil",
+        "tip": "Escucha la primera letra.",
+        "storyStep": "Capítulo 5: La firma del libro"
+      },
+      {
+        "id": "spanish-6",
+        "title": "Detective de letras",
+        "type": "target",
+        "mechanic": "Detective",
+        "prompt": "¿Qué palabra tiene la letra inicial correcta?",
+        "options": [
+          "Gato",
+          "Pato",
+          "Cato"
+        ],
+        "answer": "Gato",
+        "reward": 12,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "Busca la palabra con la letra G.",
+        "storyStep": "Capítulo 6: El caso del gato perdido"
+      },
+      {
+        "id": "spanish-7",
+        "title": "Caja de palabras",
+        "type": "collection",
+        "mechanic": "Colección",
+        "prompt": "Elige la palabra que está escrita correctamente.",
+        "options": [
+          "Luna",
+          "Lunaa",
+          "Lun"
+        ],
+        "answer": "Luna",
+        "reward": 12,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "La palabra correcta se ve completa.",
+        "storyStep": "Capítulo 7: El tesoro de la biblioteca"
+      },
+      {
+        "id": "spanish-8",
+        "title": "Forma la palabra",
+        "type": "multiple-choice",
+        "prompt": "¿Qué palabra se forma con “casa”?",
+        "options": [
+          "Casa",
+          "Cosa",
+          "Masa"
+        ],
+        "answer": "Casa",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Fácil",
+        "tip": "La palabra que ya conoces.",
+        "storyStep": "Capítulo 8: El libro que habla"
+      },
+      {
+        "id": "spanish-9",
+        "title": "Ordena la historia",
+        "type": "sort",
+        "prompt": "Ordena la secuencia correcta para continuar la lectura.",
+        "values": [
+          "Primero",
+          "Luego",
+          "Finalmente"
+        ],
+        "answer": [
+          "Primero",
+          "Luego",
+          "Finalmente"
+        ],
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "Sigue el orden natural de los hechos.",
+        "storyStep": "Capítulo 9: El cuento en orden"
+      },
+      {
+        "id": "spanish-10",
+        "title": "Crea una oración",
+        "type": "multiple-choice",
+        "prompt": "¿Qué oración está bien escrita?",
+        "options": [
+          "El perro corre.",
+          "El corre perro.",
+          "Perro el corre."
+        ],
+        "answer": "El perro corre.",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "La oración debe tener sentido.",
+        "storyStep": "Capítulo 10: La última frase del cuento"
+      },
+      {
+        "id": "spanish-11",
+        "title": "Carrera de palabras",
+        "type": "race",
+        "mechanic": "Carrera",
+        "prompt": "¿Qué palabra completa la frase “El perro ___”?",
+        "options": [
+          "corre",
+          "casa",
+          "nube"
+        ],
+        "answer": "corre",
+        "reward": 12,
+        "subject": "spanish",
+        "difficulty": "Media",
+        "tip": "La oración debe tener sentido.",
+        "storyStep": "Capítulo 11: La carrera literaria"
+      },
+      {
+        "id": "spanish-12",
+        "title": "Palabra correcta",
+        "type": "multiple-choice",
+        "prompt": "¿Cuál es la palabra correcta?",
+        "options": [
+          "Luna",
+          "Lunaa",
+          "Lun"
+        ],
+        "answer": "Luna",
+        "reward": 10,
+        "subject": "spanish",
+        "difficulty": "Fácil",
+        "tip": "No olvides la última vocal.",
+        "storyStep": "Capítulo 12: La luna de la estantería"
+      }
+    ],
+    "science": [
+      {
+        "id": "science-1",
+        "title": "El cuerpo humano",
+        "type": "multiple-choice",
+        "prompt": "¿Qué usamos para escuchar?",
+        "options": [
+          "Los ojos",
+          "Las manos",
+          "Los oídos"
+        ],
+        "answer": "Los oídos",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Fácil",
+        "tip": "Todo lo que oímos entra por ahí.",
+        "storyStep": "Capítulo 1: El mapa del cuerpo"
+      },
+      {
+        "id": "science-2",
+        "title": "Animales",
+        "type": "multiple-choice",
+        "prompt": "¿Qué animal vive en el mar?",
+        "options": [
+          "Conejo",
+          "Pez",
+          "Vaca"
+        ],
+        "answer": "Pez",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Fácil",
+        "tip": "Nada y vive en el agua.",
+        "storyStep": "Capítulo 2: El río oculto"
+      },
+      {
+        "id": "science-3",
+        "title": "¿Dónde viven?",
+        "type": "multiple-choice",
+        "prompt": "¿Dónde vive un delfín?",
+        "options": [
+          "En la selva",
+          "En el mar",
+          "En el desierto"
+        ],
+        "answer": "En el mar",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Fácil",
+        "tip": "Los delfines son animales marinos.",
+        "storyStep": "Capítulo 3: El viaje del delfín"
+      },
+      {
+        "id": "science-4",
+        "title": "Partes de una planta",
+        "type": "multiple-choice",
+        "prompt": "¿Qué parte absorbe agua?",
+        "options": [
+          "Flor",
+          "Raíz",
+          "Hoja"
+        ],
+        "answer": "Raíz",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Fácil",
+        "tip": "Se encuentra bajo la tierra.",
+        "storyStep": "Capítulo 4: La raíz del misterio"
+      },
+      {
+        "id": "science-5",
+        "title": "Carrera de plantas",
+        "type": "race",
+        "mechanic": "Carrera",
+        "prompt": "¿Qué alimenta a una planta para crecer?",
+        "options": [
+          "Luz, agua y aire",
+          "Arena y fuego",
+          "Hielo y metal"
+        ],
+        "answer": "Luz, agua y aire",
+        "reward": 12,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "La planta necesita lo básico para vivir.",
+        "storyStep": "Capítulo 5: La carrera del jardín"
+      },
+      {
+        "id": "science-6",
+        "title": "Cultivo mágico",
+        "type": "garden",
+        "mechanic": "Cultivar",
+        "prompt": "¿Qué necesita la semilla antes de brotar?",
+        "options": [
+          "Agua y luz",
+          "Piedras y humo",
+          "Nieve y arena"
+        ],
+        "answer": "Agua y luz",
+        "reward": 12,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "La semilla necesita crecer con cuidado.",
+        "storyStep": "Capítulo 6: El jardín que despierta"
+      },
+      {
+        "id": "science-7",
+        "title": "Sistema solar",
+        "type": "multiple-choice",
+        "prompt": "¿Qué planeta es nuestro hogar?",
+        "options": [
+          "Marte",
+          "Júpiter",
+          "Tierra"
+        ],
+        "answer": "Tierra",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Fácil",
+        "tip": "Es el planeta donde vivimos.",
+        "storyStep": "Capítulo 7: La órbita de la aventura"
+      },
+      {
+        "id": "science-8",
+        "title": "Ciclo del agua",
+        "type": "multiple-choice",
+        "prompt": "¿Qué sucede cuando el agua se calienta?",
+        "options": [
+          "Se congela",
+          "Se evapora",
+          "Se vuelve piedra"
+        ],
+        "answer": "Se evapora",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "Sube en forma de vapor.",
+        "storyStep": "Capítulo 8: El río que sube"
+      },
+      {
+        "id": "science-9",
+        "title": "Colección de animales",
+        "type": "collection",
+        "mechanic": "Colección",
+        "prompt": "¿Qué animal vive en el mar y se mueve con aletas?",
+        "options": [
+          "Pez",
+          "Conejo",
+          "León"
+        ],
+        "answer": "Pez",
+        "reward": 12,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "Es un animal marino.",
+        "storyStep": "Capítulo 9: El acuario secreto"
+      },
+      {
+        "id": "science-10",
+        "title": "Memorama natural",
+        "type": "memory",
+        "prompt": "Encuentra las parejas de los elementos del bosque.",
+        "cards": [
+          "dog",
+          "cat",
+          "dog",
+          "cat",
+          "fox",
+          "fox"
+        ],
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "Recuerda cada carta.",
+        "storyStep": "Capítulo 10: El jardín del recuerdo"
+      },
+      {
+        "id": "science-11",
+        "title": "¿Qué necesita una planta?",
+        "type": "multiple-choice",
+        "prompt": "¿Qué necesita una planta para crecer?",
+        "options": [
+          "Luz, agua y aire",
+          "Piedras y hielo",
+          "Fuego y humo"
+        ],
+        "answer": "Luz, agua y aire",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "Todo lo que necesita para vivir.",
+        "storyStep": "Capítulo 11: El jardín gigante"
+      },
+      {
+        "id": "science-12",
+        "title": "Gran desafío científico",
+        "type": "multiple-choice",
+        "prompt": "¿Qué hace el Sol?",
+        "options": [
+          "Da luz y calor",
+          "Hace lluvia",
+          "Baja la temperatura"
+        ],
+        "answer": "Da luz y calor",
+        "reward": 10,
+        "subject": "science",
+        "difficulty": "Media",
+        "tip": "Su energía ayuda a crecer las plantas.",
+        "storyStep": "Capítulo 12: La energía del día"
+      }
+    ]
+  },
+  "achievements": [
+    {
+      "id": "step-1",
+      "title": "Primer paso",
+      "description": "Completaste tu primera misión",
+      "unlocked": true,
+      "category": "inicio"
+    },
+    {
+      "id": "numbers",
+      "title": "Genio de los números",
+      "description": "Dominaste el bosque de los números",
+      "unlocked": true,
+      "category": "matemáticas"
+    },
+    {
+      "id": "reader",
+      "title": "Gran lector",
+      "description": "Leíste con atención y aprendiste palabras",
+      "unlocked": false,
+      "category": "español"
+    },
+    {
+      "id": "science",
+      "title": "Explorador científico",
+      "description": "Descubriste secretos del mundo",
+      "unlocked": false,
+      "category": "ciencias"
+    },
+    {
+      "id": "master",
+      "title": "Maestro del conocimiento",
+      "description": "Completaste varios desafíos en todas las materias",
+      "unlocked": false,
+      "category": "general"
+    },
+    {
+      "id": "streak",
+      "title": "Racha diaria",
+      "description": "Mantuviste una secuencia de 5 días",
+      "unlocked": true,
+      "category": "hábito"
+    }
+  ]
+}
