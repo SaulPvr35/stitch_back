@@ -21,6 +21,7 @@ class AuthController extends Controller
             'username' => ['required', 'alpha_dash', 'min:3', 'max:60', 'unique:users,username'],
             'email' => ['required', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', Password::min(8)],
+            'mobile_redirect_uri' => ['nullable', 'string', 'max:255', 'regex:/^aventura:\/\//'],
         ]);
 
         $plan = Plan::where('slug', 'explorador-mensual')->where('active', true)->first();
@@ -35,13 +36,20 @@ class AuthController extends Controller
                 'updated_at' => now(),
             ]);
 
+            $successUrl = isset($data['mobile_redirect_uri'])
+                ? $data['mobile_redirect_uri'].'?checkout=success&session_id={CHECKOUT_SESSION_ID}'
+                : config('app.frontend_url').'?checkout=success&session_id={CHECKOUT_SESSION_ID}';
+            $cancelUrl = isset($data['mobile_redirect_uri'])
+                ? str_replace('/success', '/cancelled', $data['mobile_redirect_uri']).'?checkout=cancelled'
+                : config('app.frontend_url').'?checkout=cancelled';
+
             $session = (new StripeClient(config('cashier.secret')))->checkout->sessions->create([
                 'mode' => 'subscription',
                 'line_items' => [['price' => $plan->stripe_price_id, 'quantity' => 1]],
                 'customer_email' => $data['email'],
                 'client_reference_id' => (string) $pendingId,
-                'success_url' => config('app.frontend_url').'?checkout=success&session_id={CHECKOUT_SESSION_ID}',
-                'cancel_url' => config('app.frontend_url').'?checkout=cancelled',
+                'success_url' => $successUrl,
+                'cancel_url' => $cancelUrl,
             ]);
 
             DB::table('pending_registrations')->where('id', $pendingId)->update([
